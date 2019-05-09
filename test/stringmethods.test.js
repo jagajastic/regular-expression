@@ -33,4 +33,13 @@ describe('toLower Test Suite', function () {
         expect('hELLo123'.toLower()).toBe('hello123');
         expect('HELLO!@#$%^&* ( ) - . +'.toLower()).toBe('hello!@#$%^&* ( ) - . +');
     });
-})
+});
+
+// ucFirst, convert the first character in a string to uppercase
+describe('ucFirst Test Suite', function () {
+    test('Returns the String in question but changes the First Character to an Upper case', function () {
+        expect('Hello jagajastic'.ucFirst()).toBe('Hello jagajastic');
+        expect('hello jagajastic'.ucFirst()).toBe('Hello jagajastic');
+        expect('2ello jagajastic'.ucFirst()).toBe('2ello jagajastic');
+    });
+});
