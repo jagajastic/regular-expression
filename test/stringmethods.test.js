@@ -47,7 +47,7 @@ describe('ucFirst Test Suite', function () {
 //isQuestion, check if a string is a question 
 describe('isQuestion Test Suite', function () {
     test('Return true if the string is a question (ending with a question mark)', function () {
-        expect(''.isQuestion).toBeTruthy();
-        expect(''.isQuestion).toBeFalsy();
+        expect(''.isQuestion()).toBeTruthy();
+        expect(''.isQuestion()).toBeFalsy();
     });
 });
