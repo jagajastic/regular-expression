@@ -54,7 +54,7 @@ String.prototype.listWords = function () {
 
 // wordCount, this count the words in a string 
 String.prototype.wordCount = function () {
-    let arrayOfWords = this.listWords(), wordCount = arrayOfWords== null ? 0:arrayOfWords.length;
+    let arrayOfWords = this.listWords(), wordCount = arrayOfWords == null ? 0 : arrayOfWords.length;
     return wordCount;
 }
 //exporting String prototype for method to be access
