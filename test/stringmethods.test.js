@@ -18,3 +18,11 @@ describe('hasVowel Method Test suite', function () {
 
 }); 
 
+// convert string to upper case
+describe('toUpper Test Suite', function () {
+    test('Returns the String in question but with all characters in upper cases as applicable', function () {
+        expect('Hello'.toUpper()).toBe('HELLO');
+        expect('Hello!*$%#'.toUpper()).toBe('HELLO!*$%#');
+        expect(' 4679 !*$%#'.toUpper()).toBe(' 4679 !*$%#');
+    });
+});
