@@ -51,3 +51,12 @@ describe('isQuestion Test Suite', function () {
         expect('Hello?, how are you'.isQuestion()).toBeFalsy();
     });
 });
+
+// wordCount, this count 
+describe('wordCount Test Suite', function () {
+    test('Returns the number of words in the string', function () {
+        expect('Returns the number of words in the string'.wordCount()).toBe(8);
+        expect('  '.wordCount()).toBe(0);
+        expect(' !@#$%^&*()_+ '.wordCount()).toBe(0);
+    });
+});
