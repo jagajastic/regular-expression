@@ -45,6 +45,12 @@ String.prototype.isQuestion = function () {
     let regexPattern = /\b[\w\s]+\b[?]$/, resultOfCheck = regexPattern.test(this);
     return resultOfCheck;
 }
+
+// listWord, this method list out all the word and return array of words
+String.prototype.listWords = function () {
+    let regexPattern = /\b(\w|')+\b/gim, resultOfCheck = this.match(regexPattern);
+    return resultOfCheck;
+}
 //exporting String prototype for method to be access
 module.exports = String.prototype;
 
