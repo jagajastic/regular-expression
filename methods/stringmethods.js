@@ -39,6 +39,12 @@ String.prototype.ucFirst = function () {
     }
     return (this[0] + remainChar);
 }
+
+// isQuestion, function that check a string if it's a question.
+String.prototype.isQuestion = function () {
+    let regexPattern = /\b[\w\s]+\b[?]$/, resultOfCheck = regexPattern.test(this);
+    return resultOfCheck;
+}
 //exporting String prototype for method to be access
 module.exports = String.prototype;
 

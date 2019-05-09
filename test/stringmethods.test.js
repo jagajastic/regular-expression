@@ -16,7 +16,7 @@ describe('hasVowel Method Test suite', function () {
         expect('@$%^_.!`+-}{<>'.hasVowels()).toBeFalsy();
     });
 
-}); 
+});
 
 // convert string to upper case
 describe('toUpper Test Suite', function () {
@@ -41,5 +41,13 @@ describe('ucFirst Test Suite', function () {
         expect('Hello jagajastic'.ucFirst()).toBe('Hello jagajastic');
         expect('hello jagajastic'.ucFirst()).toBe('Hello jagajastic');
         expect('2ello jagajastic'.ucFirst()).toBe('2ello jagajastic');
+    });
+});
+
+//isQuestion, check if a string is a question 
+describe('isQuestion Test Suite', function () {
+    test('Return true if the string is a question (ending with a question mark)', function () {
+        expect('Hello, how are you?'.isQuestion()).toBeTruthy();
+        expect('Hello?, how are you'.isQuestion()).toBeFalsy();
     });
 });
