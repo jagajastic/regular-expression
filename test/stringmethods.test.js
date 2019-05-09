@@ -26,3 +26,11 @@ describe('toUpper Test Suite', function () {
         expect(' 4679 !*$%#'.toUpper()).toBe(' 4679 !*$%#');
     });
 });
+
+// convert string to lower case
+describe('toLower Test Suite', function () {
+    test('Returns the String in question but with all characters in their lower cases as applicable', function () {
+        expect('hELLo123'.toLower()).toBe('hello123');
+        expect('HELLO!@#$%^&* ( ) - . +'.toLower()).toBe('hello!@#$%^&* ( ) - . +');
+    });
+})
