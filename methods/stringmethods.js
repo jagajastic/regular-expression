@@ -51,7 +51,11 @@ String.prototype.listWords = function () {
     let regexPattern = /\b(\w|')+\b/gim, resultOfCheck = this.match(regexPattern);
     return resultOfCheck;
 }
+
+// wordCount, this count the words in a string 
+String.prototype.wordCount = function () {
+    let arrayOfWords = this.listWords(), wordCount = arrayOfWords== null ? 0:arrayOfWords.length;
+    return wordCount;
+}
 //exporting String prototype for method to be access
 module.exports = String.prototype;
-
-// console.log('hello d'.hasVowels());
