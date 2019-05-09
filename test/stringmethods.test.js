@@ -51,7 +51,7 @@ describe('isQuestion Test Suite', function () {
         expect('Hello?, how are you'.isQuestion()).toBeFalsy();
     });
 });
-   
+
 // listWords, this loop through string then return array of all string
 describe('listWords Test suite', function () {
     test('Returns a list of the words in the string, as an Array', function () {
@@ -67,5 +67,5 @@ describe('wordCount Test Suite', function () {
         expect('Returns the number of words in the string'.wordCount()).toBe(8);
         expect('  '.wordCount()).toBe(0);
         expect(' !@#$%^&*()_+ '.wordCount()).toBe(1);
-    });    
+    });
 });
