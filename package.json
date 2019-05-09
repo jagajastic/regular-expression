@@ -1,0 +1,23 @@
+{
+  "name": "regular-expression",
+  "version": "1.0.0",
+  "description": "setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagajastic/regular-expression.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jagajastic/regular-expression/issues"
+  },
+  "homepage": "https://github.com/jagajastic/regular-expression#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
