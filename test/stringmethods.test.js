@@ -77,3 +77,11 @@ describe('toCurrency Test Suite', function () {
         expect('110.1234'.toCurrency()).toBe('110.1234');
     });
 });
+
+// fromCurrency, this format currency to digit
+describe('fromCurrency Test Suite', function () {
+    test('Returns a number representation of the Currency String', function () {
+        expect('1,234,567,879.22'.fromCurrency()).toBe('1234567879.22');
+        expect('110.1234'.fromCurrency()).toBe('110.1234');
+    });
+});
