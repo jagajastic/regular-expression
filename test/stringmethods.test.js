@@ -61,11 +61,19 @@ describe('listWords Test suite', function () {
     });
 });
 
-// wordCount, this count 
+// wordCount, this count words 
 describe('wordCount Test Suite', function () {
     test('Returns the number of words in the string', function () {
         expect('Returns the number of words in the string'.wordCount()).toBe(8);
         expect('  '.wordCount()).toBe(0);
         expect(' !@#$%^&*()_+ '.wordCount()).toBe(1);
+    });
+});
+
+// toCurrency, this format digit to currency
+describe('toCurrency Test Suite', function () {
+    test('Returns a currency representation of the String of digit', function () {
+        expect('1234567879.22'.toCurrency()).toBe('1,234,567,879.22');
+        expect('110.1234'.toCurrency()).toBe('110.1234');
     });
 });

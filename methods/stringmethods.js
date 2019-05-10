@@ -57,5 +57,12 @@ String.prototype.wordCount = function () {
     let arrayOfWords = this.listWords(), wordCount = arrayOfWords == null ? 0 : arrayOfWords.length;
     return wordCount;
 }
+
+// currency formater
+String.prototype.toCurrency = function () {
+    let regExPattern = /\d(?=(\d{3})+\.)/g;
+    let replacer = '$&,';
+    return this.replace(regExPattern, replacer);
+}
 //exporting String prototype for method to be access
 module.exports = String.prototype;
