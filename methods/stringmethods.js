@@ -64,5 +64,12 @@ String.prototype.toCurrency = function () {
     let replacer = '$&,';
     return this.replace(regExPattern, replacer);
 }
+
+// fromCurrency to digit formater
+String.prototype.fromCurrency = function () {
+    let regExPattern = /,/g;
+  return this.replace(regExPattern, '');
+}
+
 //exporting String prototype for method to be access
 module.exports = String.prototype;
