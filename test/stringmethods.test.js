@@ -93,3 +93,11 @@ describe('inverseCase Test Suite', function () {
         expect('INVERSEcASE tEST sUITE'.inverseCase()).toBe('inverseCase Test Suite');
     });
 });
+
+// alternatingCase, Returns the letters in alternating cases. It must start with a lower case
+describe('alternatingCase Test suite', function () {
+    test('Returns the letters in alternating cases. It must start with a lower case', function () {
+        expect('Onomatopoeia'.alternatingCase()).toBe('oNoMaToPoEiA');
+        expect('!onomatopoeia'.alternatingCase()).toBe('you test contain special character!');
+    });
+});
