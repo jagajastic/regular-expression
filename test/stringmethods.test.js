@@ -85,3 +85,11 @@ describe('fromCurrency Test Suite', function () {
         expect('110.1234'.fromCurrency()).toBe('110.1234');
     });
 });
+
+// inverseCase, Returns each letter in the string as an inverse of its current case
+describe('inverseCase Test Suite', function () {
+    test('Returns each letter in the string as an inverse of its current case', function () {
+        expect('inverseCase Test Suite'.inverseCase()).toBe('INVERSEcASE tEST sUITE');
+        expect('INVERSEcASE tEST sUITE'.inverseCase()).toBe('inverseCase Test Suite');
+    });
+});
