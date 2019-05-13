@@ -89,10 +89,22 @@ String.prototype.inverseCase = function () {
     return casedString;
 }
 
+// inverseCase, Returns the letters in alternating cases. It must start with a lower case
+String.prototype.alternatingCase = function () {
+    if (/[!]/g.test(this)) {
+        return 'you test contain special character!';
+    }
+    let casedString = '';
+    for (let index = 0; index < this.length; index++) {
+        if (index % 2 !== 0) {
+            casedString += this[index].toUpper();
+            continue;
+        }
+        casedString += this[index].toLower();
+    }
+    return casedString;
+}
 
 //exporting String prototype for method to be access
 module.exports = String.prototype;
 
-
-
-console.log('Returns each LetteR in the string as an inverse of its current case'.inverseCase());
