@@ -101,3 +101,11 @@ describe('alternatingCase Test suite', function () {
         expect('!onomatopoeia'.alternatingCase()).toBe('you test contain special character!');
     });
 });
+
+// numberWords, Returns the numbers in words
+describe('numberWords Test suite', function ()  {
+    test('Returns the numbers in words', function () {
+        expect('123'.numberWords()).toBe('one two three ');
+        expect('!123'.numberWords()).toBe('your string contain special character/signs/space');
+    });
+});
