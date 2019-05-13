@@ -1,3 +1,6 @@
+//  import helper functions
+const { isUpperCase, isLowerCase } = require('../helper/helpermethods');
+
 // hasVowels, function to check if a string contain vowel and return true|false.
 String.prototype.hasVowels = function () {
     let regexPattern = /[aeiou]/, resultOfCheck = regexPattern.test(this);
@@ -68,8 +71,28 @@ String.prototype.toCurrency = function () {
 // fromCurrency to digit formater
 String.prototype.fromCurrency = function () {
     let regExPattern = /,/g;
-  return this.replace(regExPattern, '');
+    return this.replace(regExPattern, '');
 }
+
+// inverseCase method, Returns each letter in the string as an inverse of its current case
+String.prototype.inverseCase = function () {
+    let casedString = "";
+    for (let index = 0; index < this.length; index++) {
+        if (isUpperCase(this[index])) {
+            let char = this[index].toLower();
+            casedString += char;
+            continue;
+        }
+        let char = this[index].toUpper();
+        casedString += char;
+    }
+    return casedString;
+}
+
 
 //exporting String prototype for method to be access
 module.exports = String.prototype;
+
+
+
+console.log('Returns each LetteR in the string as an inverse of its current case'.inverseCase());
