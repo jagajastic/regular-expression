@@ -18,7 +18,7 @@ describe('hasVowel Method Test suite', function () {
 
 });
 
-// convert string to upper case
+// convert string to upper case test suite
 describe('toUpper Test Suite', function () {
     test('Returns the String in question but with all characters in upper cases as applicable', function () {
         expect('Hello'.toUpper()).toBe('HELLO');
@@ -27,7 +27,7 @@ describe('toUpper Test Suite', function () {
     });
 });
 
-// convert string to lower case
+// convert string to lower case test suite
 describe('toLower Test Suite', function () {
     test('Returns the String in question but with all characters in their lower cases as applicable', function () {
         expect('hELLo123'.toLower()).toBe('hello123');
@@ -35,7 +35,7 @@ describe('toLower Test Suite', function () {
     });
 });
 
-// ucFirst, convert the first character in a string to uppercase
+// ucFirst, convert the first character in a string to uppercase test suite
 describe('ucFirst Test Suite', function () {
     test('Returns the String in question but changes the First Character to an Upper case', function () {
         expect('Hello jagajastic'.ucFirst()).toBe('Hello jagajastic');
@@ -44,7 +44,7 @@ describe('ucFirst Test Suite', function () {
     });
 });
 
-//isQuestion, check if a string is a question 
+//isQuestion, check if a string is a question test suite
 describe('isQuestion Test Suite', function () {
     test('Return true if the string is a question (ending with a question mark)', function () {
         expect('Hello, how are you?'.isQuestion()).toBeTruthy();
@@ -52,7 +52,7 @@ describe('isQuestion Test Suite', function () {
     });
 });
 
-// listWords, this loop through string then return array of all string
+// listWords, this loop through string then return array of all string test suite
 describe('listWords Test suite', function () {
     test('Returns a list of the words in the string, as an Array', function () {
         expect('Returns a list of words'.listWords()).toEqual(expect.arrayContaining(['Returns', 'a', 'list', 'of', 'words']));
@@ -61,7 +61,7 @@ describe('listWords Test suite', function () {
     });
 });
 
-// wordCount, this count words 
+// wordCount, this count words test suite
 describe('wordCount Test Suite', function () {
     test('Returns the number of words in the string', function () {
         expect('Returns the number of words in the string'.wordCount()).toBe(8);
@@ -70,7 +70,7 @@ describe('wordCount Test Suite', function () {
     });
 });
 
-// toCurrency, this format digit to currency
+// toCurrency, this format digit to currency test suite
 describe('toCurrency Test Suite', function () {
     test('Returns a currency representation of the String of digit', function () {
         expect('1234567879.22'.toCurrency()).toBe('1,234,567,879.22');
@@ -78,7 +78,7 @@ describe('toCurrency Test Suite', function () {
     });
 });
 
-// fromCurrency, this format currency to digit
+// fromCurrency, this format currency to digit test suite
 describe('fromCurrency Test Suite', function () {
     test('Returns a number representation of the Currency String', function () {
         expect('1,234,567,879.22'.fromCurrency()).toBe('1234567879.22');
@@ -86,7 +86,7 @@ describe('fromCurrency Test Suite', function () {
     });
 });
 
-// inverseCase, Returns each letter in the string as an inverse of its current case
+// inverseCase, Returns each letter in the string as an inverse of its current case test suite
 describe('inverseCase Test Suite', function () {
     test('Returns each letter in the string as an inverse of its current case', function () {
         expect('inverseCase Test Suite'.inverseCase()).toBe('INVERSEcASE tEST sUITE');
@@ -107,5 +107,14 @@ describe('numberWords Test suite', function ()  {
     test('Returns the numbers in words', function () {
         expect('123'.numberWords()).toBe('one two three ');
         expect('!123'.numberWords()).toBe('your string contain special character/signs/space');
+    });
+});
+
+// isDigit, Returns true if the string is a digit(one number) test suite
+describe('isDigit', function () {
+    test('Returns true if the string is a digit(one number)', function () {
+        expect('1'.isDigit()).toBeTruthy();
+        expect('11234'.isDigit()).toBeFalsy();
+        expect('!'.isDigit()).toBeFalsy();
     });
 });
