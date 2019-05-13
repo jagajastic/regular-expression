@@ -105,6 +105,20 @@ String.prototype.alternatingCase = function () {
     return casedString;
 }
 
+// numberWords, Returns the numbers in words
+String.prototype.numberWords = function () {
+    let numberWords = '';
+    let arrayOfWords = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+    for (let index = 0; index < this.length; index++) {
+        let wordIdex = this[index];
+        if (arrayOfWords[wordIdex] === undefined) {
+            return 'your string contain special character/signs/space';
+        }
+        numberWords += arrayOfWords[wordIdex] + ' ';
+    }
+    return numberWords;
+}
+
 //exporting String prototype for method to be access
 module.exports = String.prototype;
 
