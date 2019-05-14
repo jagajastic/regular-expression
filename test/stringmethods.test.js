@@ -5,8 +5,8 @@ require('../methods/stringmethods');
 describe('hasVowel Method Test suite', function () {
     // return true if string has vowel in it
     test('Returns true if the string contains vowels', function () {
-        let textString = 'Hello world of regex';
-        let resultOfCheck = textString.hasVowels();
+        var textString = 'Hello world of regex';
+        var resultOfCheck = textString.hasVowels();
         expect(resultOfCheck).toBeTruthy();
     });
     // return false if no vowel in string
