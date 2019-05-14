@@ -1,7 +1,7 @@
 // helper function
 function isUpperCase(char){
     var code = char.charCodeAt(0);
-    if (!(code >64 && code < 91)) { // numeric (A-Z)
+    if (!/[A-Z]/g.test(char)) { // numeric (A-Z)
         return false;
     }
     return true;
@@ -9,7 +9,7 @@ function isUpperCase(char){
 
 function isLowerCase(char){
     var code = char.charCodeAt(0);
-    if (!(code > 96 && code < 123)) { // numeric (a-z)
+    if (!/[a-z]/g) { // numeric (a-z)
         return false;
     }
     return true;
