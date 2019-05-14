@@ -1,5 +1,5 @@
 //  import helper functions
-const { isUpperCase, isLowerCase } = require('../helper/helpermethods');
+var { isUpperCase } = require('../helper/helpermethods');
 
 // hasVowels, Returns true if the string contains vowels
 String.prototype.hasVowels = function () {
