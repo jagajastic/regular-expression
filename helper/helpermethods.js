@@ -1,18 +1,6 @@
 // helper function
-function isUpperCase(char){
-    var code = char.charCodeAt(0);
-    if (!/[A-Z]/g.test(char)) { // numeric (A-Z)
-        return false;
-    }
-    return true;
+function isUpperCase(char) {
+  if (!/[A-Z]/g.test(char)) { return false;};
+  return true;
 }
-
-function isLowerCase(char){
-    var code = char.charCodeAt(0);
-    if (!/[a-z]/g) { // numeric (a-z)
-        return false;
-    }
-    return true;
-}
-
-module.exports = {isUpperCase, isLowerCase};
+module.exports = isUpperCase;
