@@ -11,9 +11,11 @@ String.prototype.toUpperChar = function() {
   var caseString = '';
   for (var index = 0; index < this.length; index++) {
     if (/[a-z]/g.test(this[index])) {
-      caseString += String.fromCharCode(this.charCodeAt(index) - 32); // convert to upper case using character code
+      // convert character to upper case using character code
+      caseString += String.fromCharCode(this.charCodeAt(index) - 32);
     } else {
-      caseString += String.fromCharCode(this.charCodeAt(index)); // return the upper case
+      // append the upper case character
+      caseString += String.fromCharCode(this.charCodeAt(index));
     }
   }
   return caseString;
@@ -24,9 +26,11 @@ String.prototype.toLower = function() {
   var caseString = '';
   for (var index = 0; index < this.length; index++) {
     if (/[A-Z]/g.test(this[index])) {
-      caseString += String.fromCharCode(this.charCodeAt(index) + 32); // convert upper case to lower case
+      // convert upper case to lower case
+      caseString += String.fromCharCode(this.charCodeAt(index) + 32);
     } else {
-      caseString += String.fromCharCode(this.charCodeAt(index)); //return the case like that(lower)
+      //return the case like that(lower)
+      caseString += String.fromCharCode(this.charCodeAt(index));
     }
   }
   return caseString;
@@ -35,34 +39,40 @@ String.prototype.toLower = function() {
 // ucFirst, Returns the String in question but changes the First Character to an Upper case
 String.prototype.ucFirst = function() {
   if (/^[a-z]/.test(this)) {
-    return this[0].toUpperChar() + this.slice(1); //change case to uppercase
+    //change case to uppercase
+    return this[0].toUpperChar() + this.slice(1);
   }
   return this[0] + this.slice(1);
 };
 
 // isQuestion, Return true if the string is a question (ending with a question mark)
 String.prototype.isQuestion = function() {
-  return /\?$/gim.test(this); // return true if the match the word with preceeding space
+  // return true if the match the word with preceeding space
+  return /\?$/gim.test(this);
 };
 
 // listWord, Returns a list of the words in the string, as an Array.
 String.prototype.listWords = function() {
-  return this.match(/(\w|')+/gim); // return all match in an arrray
+  // return all match in an arrray
+  return this.match(/(\w|')+/gim);
 };
 
 // wordCount, Returns the number of words in the string
 String.prototype.wordCount = function() {
-  return this.listWords() === null ? 0 : this.listWords().length; // get the list of word in array, then return the length
+  // get the list of word in array, then return the length
+  return this.listWords() === null ? 0 : this.listWords().length;
 };
 
 // toCurrency, Returns a currency representation of the String
 String.prototype.toCurrency = function() {
+  //replace the the string of number with the commaa separated number
   return this.replace(/\d(?=(\d{3})+\.)/g, '$&,');
-}; //replace the the string of number with the commaa separated number
+};
 
 // fromCurrency, Returns a number representation of the Currency String
 String.prototype.fromCurrency = function() {
-  return this.replace(/,/g, ''); // replace comma with no space
+  // replace comma with no space
+  return this.replace(/,/g, '');
 };
 
 // inverseCase method, Returns each letter in the string as an inverse of its current case
@@ -89,14 +99,14 @@ String.prototype.alternatingCase = function() {
   for (var index = 0; index < this.length; index++) {
     // check if the posiion of string is odd or even
     if (index % 2 !== 0) {
-      casedString += this[index].toUpperChar(); // change to uppercase
+      // change to uppercase
+      casedString += this[index].toUpperChar();
     } else {
-      casedString += this[index].toLower(); // change character to lowercase
+      // change character to lowercase
+      casedString += this[index].toLower();
     }
   }
   return casedString;
-
-  
 };
 
 // numberWords, Returns the numbers in words
@@ -115,12 +125,14 @@ String.prototype.numberWords = function() {
     'nine'
   ]; //defined number in words
   for (var index = 0; index < this.length; index++) {
-    var wordIdex = this[index]; // get the number
+    // get the number
+    var wordIdex = this[index];
     // if index is undefine, return false
     if (arrayOfWords[wordIdex] === undefined) {
       return false;
     }
-    numberWords += arrayOfWords[wordIdex] + ' '; // use the grabbed number as index of the defined number in words
+    // use the grabbed number as index of the defined number in words
+    numberWords += arrayOfWords[wordIdex] + ' ';
   }
   return numberWords;
 };
@@ -130,7 +142,8 @@ String.prototype.isDigit = function() {
   if (this.length > 1) {
     return false;
   }
-  return /^\d/.test(this); //check if string is a number, return true if it is, else false
+  //check if string is a number, return true if it is, else false
+  return /^\d/.test(this);
 };
 
 //exporting String prototype for method to be access
