@@ -111,7 +111,8 @@ String.prototype.alternatingCase = function() {
 
 // numberWords, Returns the numbers in words
 String.prototype.numberWords = function() {
-  var numberWords = '';
+  var numberInWords = '';
+  //defined number in words
   var arrayOfWords = [
     'zero',
     'one',
@@ -123,7 +124,7 @@ String.prototype.numberWords = function() {
     'seven',
     'eight',
     'nine'
-  ]; //defined number in words
+  ];
   for (var index = 0; index < this.length; index++) {
     // get the number
     var wordIdex = this[index];
@@ -132,9 +133,9 @@ String.prototype.numberWords = function() {
       return false;
     }
     // use the grabbed number as index of the defined number in words
-    numberWords += arrayOfWords[wordIdex] + ' ';
+    numberInWords += arrayOfWords[wordIdex] + ' ';
   }
-  return numberWords;
+  return numberInWords;
 };
 
 // isDigit, Returns true if the string is a digit(one number)
